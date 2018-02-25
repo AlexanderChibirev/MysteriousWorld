@@ -1,0 +1,15 @@
+User Tester Name: Natalia A. 
+
+Date: January 22, 2017
+
+1) What do you see in front of you?
+Answer: a panel and the word "start". 
+
+2) What do you think of the directions on the panel?
+Answer: the direction are clear.
+
+3) What does pressing a button do?
+Answer: it switches the panels.  
+
+* Note to self: while the tester didn't mention anything about this, I found that when the buttons switched color (because they were hit by a ray), it was more distracting than helpful. 
+

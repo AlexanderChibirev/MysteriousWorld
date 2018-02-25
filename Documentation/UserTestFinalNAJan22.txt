@@ -1,0 +1,25 @@
+User Tester Name: Natalia A. 
+
+Date: January 22, 2017
+
+First Round:
+
+-- the user did not understand what to do with the orbs and she could not hear the "failure" sound because the ambient music was too loud
+
+-- she thought that the purple particles flying from the orbs were distracting
+
+Fixes:
+
+1) I changed the instructions on the welcome screen to tell the user what to do.
+2) I removed the particles from the orbs.
+3) I made the ambient music softer and the "failure" sound louder.
+
+Second Round:
+
+-- the sound was better but the user kept clicking the Cardboard button while looking at an orb, which resulted
+in a double-click
+
+Fixes:
+
+1) I added a third line of instructions telling users to AVOID clicking the button.
+
