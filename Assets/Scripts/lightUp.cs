@@ -3,11 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 
-/*
-* Date: January 22, 2017
-* Name: Olga Agafonova
-* Note: I commented out particle emission because it was confusing to the user
-*/
 public class lightUp : MonoBehaviour
 {
 
