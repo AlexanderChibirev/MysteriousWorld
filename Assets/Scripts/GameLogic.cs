@@ -94,10 +94,10 @@ public class GameLogic : MonoBehaviour
       //Generate a random number one through five, save it in an array.  Do this n times.
       //Step through the array for displaying the puzzle, and checking puzzle failure or success.
 
-       // if (withUpdate)
-       // {
+        if (withUpdate)
+        {
             updateDifficultyForGame();
-      //  }
+        }
         startUI.SetActive(false);
         //eventSystem.SetActive(false); not a good idea to disable the event system because GazeInputModule will stop working
         iTween.MoveTo(player, waypointsForPlayer[currentIndexForPlayPoints].transform.position, 5f);
@@ -105,7 +105,7 @@ public class GameLogic : MonoBehaviour
         CancelInvoke("displayPattern");
         InvokeRepeating("displayPattern", 3, magicObjectSpeed); //Start running through the displaypattern function
         currentSolveIndex = 0; //Set our puzzle index at 0
-        magicObjectSetEnable(true, getCurrentMagicObjects()); // work incorrect TODO:: work!!!
+        magicObjectSetEnable(true, getCurrentMagicObjects()); 
     }
 
     private void updateDifficultyForGame()
@@ -131,10 +131,10 @@ public class GameLogic : MonoBehaviour
                 initFields(7, 0.5f);
                 break;
             case 6:
-                initFields(10, 0.9f);
+                initFields(8, 0.9f);
                 break;
             case 7:
-                initFields(10, 0.5f);             
+                initFields(8, 0.5f);             
                 break;
             case 8://added moved bloksss he he h
                 initFields(10, 0.5f);
@@ -155,7 +155,6 @@ public class GameLogic : MonoBehaviour
     {
         foreach (GameObject sphere in objects)
         {
-
             sphere.SetActive(enabled);
         }
     }
