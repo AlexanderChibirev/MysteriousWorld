@@ -83,16 +83,21 @@ public class GameLogic : MonoBehaviour
         }
         else
         {
-            magicObjectFailure();
+            magicObjectFailure(false);
         }
 
     }
 
 
-    public void startMagicObject()
+    public void startMagicObject(bool withUpdate)
     { //Begin the puzzle sequence
       //Generate a random number one through five, save it in an array.  Do this n times.
       //Step through the array for displaying the puzzle, and checking puzzle failure or success.
+
+       // if (withUpdate)
+       // {
+            updateDifficultyForGame();
+      //  }
         startUI.SetActive(false);
         //eventSystem.SetActive(false); not a good idea to disable the event system because GazeInputModule will stop working
         iTween.MoveTo(player, waypointsForPlayer[currentIndexForPlayPoints].transform.position, 5f);
@@ -103,11 +108,54 @@ public class GameLogic : MonoBehaviour
         magicObjectSetEnable(true, getCurrentMagicObjects()); // work incorrect TODO:: work!!!
     }
 
+    private void updateDifficultyForGame()
+    {
+        switch (currentIndexForPlayPoints)
+        {
+            case 0:
+                initFields(5, 1f);           
+                break;
+            case 1:
+                initFields(5, 0.3f);             
+                break;
+            case 2:
+                initFields(6, 0.5f);              
+                break;
+            case 3:
+                initFields(6, 0.3f);            
+                break;
+            case 4:
+                initFields(7, 0.8f);
+                break;
+            case 5:
+                initFields(7, 0.5f);
+                break;
+            case 6:
+                initFields(10, 0.9f);
+                break;
+            case 7:
+                initFields(10, 0.5f);             
+                break;
+            case 8://added moved bloksss he he h
+                initFields(10, 0.5f);
+                break;
+            default:
+                break;
+        }
+        generateMagicObjectSequence();
+    }
+
+    private void initFields(int lenght, float speed) {
+        magicObjectLength = lenght;
+        magicObjectOrder = new int[magicObjectLength];
+        magicObjectSpeed = speed;
+    }
+
     private void magicObjectSetEnable(bool enabled, GameObject[] objects)
     {
         foreach (GameObject sphere in objects)
         {
-            Debug.Log("Зашел");
+
             sphere.SetActive(enabled);
         }
     }
@@ -199,7 +247,7 @@ public class GameLogic : MonoBehaviour
         generateMagicObjectSequence(); //Generate the puzzle sequence for this playthrough.  
     }
 
-    public void magicObjectFailure()
+    public void magicObjectFailure(bool withUpdate)
     { //Do this when the player gets it wrong
         Debug.Log("You've Failed, Resetting puzzle");
 
@@ -208,7 +256,7 @@ public class GameLogic : MonoBehaviour
         failAudioHolder.GetComponent<GvrAudioSource>().enabled = true;
         failAudioHolder.GetComponent<GvrAudioSource>().Play();
 
-        startMagicObject();
+        startMagicObject(withUpdate);
 
     }
 
@@ -232,7 +280,7 @@ public class GameLogic : MonoBehaviour
             Debug.Log("ДВИГАЕМ ДАЛЬШЕ");
             magicObjectSetEnable(false, getCurrentMagicObjects());
             currentIndexForPlayPoints++;
-            magicObjectFailure();
+            magicObjectFailure(true);
         }
     }
 

@@ -87,6 +87,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DreamStarGenerator\Scripts\DreamStarAnimator.cs" />
+    <Compile Include="Assets\DreamStarGenerator\Scripts\DreamStarGenerator.cs" />
+    <Compile Include="Assets\DreamStarGenerator\Scripts\DreamStarGenerator_Crazy.cs" />
+    <Compile Include="Assets\DreamStarGenerator\Scripts\DreamStarGenerator_Curved.cs" />
+    <Compile Include="Assets\DreamStarGenerator\Scripts\MeshGenerator\MathUtilities.cs" />
+    <Compile Include="Assets\DreamStarGenerator\Scripts\MeshGenerator\MeshExporter.cs" />
+    <Compile Include="Assets\DreamStarGenerator\Scripts\MeshGenerator\MeshGenerator.cs" />
     <Compile Include="Assets\GoogleVR\DemoScenes\ControllerDemo\ControllerDebugInfo.cs" />
     <Compile Include="Assets\GoogleVR\DemoScenes\ControllerDemo\ControllerDemoManager.cs" />
     <Compile Include="Assets\GoogleVR\DemoScenes\HeadsetDemo\Teleport.cs" />
@@ -179,6 +186,7 @@
     <Compile Include="Assets\zzRuler\zzVerticalRuler.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\DreamStarGenerator\Materials\Shader\MagicStar.shader" />
     <None Include="Assets\GoogleVR\Distortion\GvrDistortion.cginc" />
     <None Include="Assets\GoogleVR\Legacy\Resources\SolidColor.shader" />
     <None Include="Assets\GoogleVR\Legacy\Resources\UnlitTexture.shader" />

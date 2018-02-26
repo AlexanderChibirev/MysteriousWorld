@@ -87,6 +87,7 @@
     <Compile Include="Assets\Plugins\Pixelplacement\iTween\iTween.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\DreamStarGenerator\Materials\Shader\MagicStar.shader" />
     <None Include="Assets\GoogleVR\Distortion\GvrDistortion.cginc" />
     <None Include="Assets\GoogleVR\Legacy\Resources\SolidColor.shader" />
     <None Include="Assets\GoogleVR\Legacy\Resources\UnlitTexture.shader" />
