@@ -152,6 +152,9 @@
     <Compile Include="Assets\POLY STYLE - Vegetation Pack\Editor\ImageEffects\SunShaftsEditor.cs" />
     <Compile Include="Assets\POLY STYLE - Vegetation Pack\Editor\ImageEffects\TonemappingEditor.cs" />
     <Compile Include="Assets\POLY STYLE - Vegetation Pack\Editor\ImageEffects\VignetteAndChromaticAberrationEditor.cs" />
+    <Compile Include="Assets\WR_wHiteRabbiT-sTudio\WRFramework\Unity\Editor\Tools\AboutEW.cs" />
+    <Compile Include="Assets\WR_wHiteRabbiT-sTudio\WRFramework\Unity\Editor\Tools\ContinuationManager.cs" />
+    <Compile Include="Assets\WR_wHiteRabbiT-sTudio\WRFramework\Unity\Editor\Tools\wHiteRabbiTEW.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\DreamStarGenerator\Materials\Shader\MagicStar.shader" />
@@ -230,6 +233,7 @@
     <None Include="Assets\Plugins\Android\AndroidManifest-Daydream.xml" />
     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
+    <None Include="Assets\WR_wHiteRabbiT-sTudio\Scene\DancingRabbit\ReadMe.txt" />
     <None Include="Assets\zzRuler\readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
