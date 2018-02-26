@@ -278,8 +278,8 @@ public class GameLogic : MonoBehaviour
         {
             Debug.Log("ДВИГАЕМ ДАЛЬШЕ");
             magicObjectSetEnable(false, getCurrentMagicObjects());
-            currentIndexForPlayPoints++;
-            magicObjectFailure(true);
+            currentIndexForPlayPoints++;        
+            startMagicObject(true);         
         }
     }
 
