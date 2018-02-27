@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Oscillator : MonoBehaviour
 {
+
     float timeCounter = 0;
     // Use this for initialization
 
@@ -13,9 +14,9 @@ public class Oscillator : MonoBehaviour
     void Start()
     {
 
-        speed = 0.5f;
-        width = -3.21f;
-        height = 2.636f;
+        speed = 0.000000005f;
+        width = 1f;
+        height = 1f;
     }
 
     // Update is called once per frame
@@ -26,8 +27,9 @@ public class Oscillator : MonoBehaviour
         float x = Mathf.Cos(timeCounter) * width;
 
         float y = Mathf.Sin(timeCounter) * height;
-        float z = 6.819f;
-
-        transform.position = new Vector3(x, y, z);
+        float z = 0;
+        Debug.Log("ДО: " + transform.position);
+        transform.position = new Vector3(transform.position.x + x, transform.position.y + y, transform.position.z + z);
+        Debug.Log("После: " + transform.position);
     }
 }

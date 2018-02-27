@@ -19,7 +19,7 @@ public class GameLogic : MonoBehaviour
     public GameObject[] magicObjects7;
     public GameObject[] magicObjects8;
     public GameObject[] magicObjects9;
-
+    public GameObject magicObject91;
 
     public GameObject[] waypointsForPlayer;
 
@@ -47,7 +47,12 @@ public class GameLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(currentIndexForPlayPoints == 8)
+        {
+           // Debug.Log("зашелЫЫЫЫЫЫЫЫЫЫЫЫ");
 
+           // iTween.MoveTo(magicObject91, waypointsForPlayer[currentIndexForPlayPoints-1].transform.position, 0.00001f);
+        }
     }
 
 
